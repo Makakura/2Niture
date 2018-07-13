@@ -84,17 +84,17 @@
     ===========================================================*/
     var posWrapHeader = $('.topbar').height();
     var header = $('.container-menu-header');
+    var posWrapHeader2 = $('.container-menu-header').height();
 
     $(window).on('scroll',function(){
 
-        if($(this).scrollTop() >= posWrapHeader) {
+        if($(this).scrollTop() >= posWrapHeader2) {
+            $(header).css('top',0); 
             $('.header1').addClass('fixed-header');
-            $(header).css('top',-posWrapHeader); 
-
         }  
         else {
             var x = - $(this).scrollTop(); 
-            $(header).css('top',x); 
+            $(header).css('top',0); 
             $('.header1').removeClass('fixed-header');
         } 
 
